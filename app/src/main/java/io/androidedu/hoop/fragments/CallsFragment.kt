@@ -18,5 +18,10 @@ class CallsFragment : Fragment() {
         return inflater.inflate(R.layout.fragment_calls, container, false)
     }
 
+    companion object {
+        @JvmStatic
+        fun newInstance() = CallsFragment()
+    }
+
 
 }

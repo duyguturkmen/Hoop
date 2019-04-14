@@ -19,4 +19,9 @@ class CameraFragment : Fragment() {
     }
 
 
+    companion object {
+        @JvmStatic
+        fun newInstance() = CameraFragment()
+    }
+
 }

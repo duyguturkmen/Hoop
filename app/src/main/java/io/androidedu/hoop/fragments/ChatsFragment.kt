@@ -6,8 +6,13 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
+import androidx.recyclerview.widget.LinearLayoutManager
+import io.androidedu.hoop.adapter.ChatListAdapter
 
 import io.androidedu.hoop.R
+import io.androidedu.hoop.util.GenerateDummyData
+import kotlinx.android.synthetic.main.fragment_chats.*
 
 class ChatsFragment : Fragment() {
 
@@ -16,6 +21,23 @@ class ChatsFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         return inflater.inflate(R.layout.fragment_chats, container, false)
+    }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+        with(recyclerChatList) {
+            adapter = ChatListAdapter(GenerateDummyData.getDummyChatList()) { chatModel ->
+
+            }
+            layoutManager = LinearLayoutManager(activity)
+        }
+
+    }
+
+    companion object {
+        @JvmStatic
+        fun newInstance() = ChatsFragment()
     }
 
 
