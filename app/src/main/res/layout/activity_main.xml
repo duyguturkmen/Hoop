@@ -7,17 +7,15 @@
         tools:context=".MainActivity"
         android:orientation="vertical">
 
-    <include layout="@layout/layout_tab"/>
-
     <com.google.android.material.tabs.TabLayout
-            android:id="@+id/tblHoopContanier"
+            android:id="@+id/tableLayout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
     </com.google.android.material.tabs.TabLayout>
 
     <androidx.viewpager.widget.ViewPager
-            android:id="@+id/wpTabLayout"
+            android:id="@+id/wpHoopContaniew"
             android:layout_width="match_parent"
             android:layout_height="wrap_content">
 
